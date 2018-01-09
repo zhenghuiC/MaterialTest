@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.testcardview.Main3Activity">
     <!--
-       app:layout_scrollFlags="scroll|enterAlways|snap"
-       scroll表示当recycleView向上滚动的时候，Toolbar会跟着一起向上滚动并实现隐藏。
-       enterAlways表示当recycleView向下滚动的时候，ToolBar会跟着一起向下滚动并重新显示。
-       snap表示当Toolbar还没有完全隐藏或者显示的时候，会根据当前滚动的距离，自动选择是隐藏还是显示
+    app:layout_scrollFlags="scroll|enterAlways|snap"
+    scroll表示当recycleView向上滚动的时候，Toolbar会跟着一起向上滚动并实现隐藏。
+    enterAlways表示当recycleView向下滚动的时候，ToolBar会跟着一起向下滚动并重新显示。
+    snap表示当Toolbar还没有完全隐藏或者显示的时候，会根据当前滚动的距离，自动选择是隐藏还是显示
 
     这里
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -46,7 +46,5 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         ></android.support.v7.widget.RecyclerView>
-
-
 
 </android.support.design.widget.CoordinatorLayout>

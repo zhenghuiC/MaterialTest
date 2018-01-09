@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,5 +32,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ToastUtil.showToast("测试全局Context=-=");
     }
 }
