@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.testcardview.Main3Activity">
+    <!--
+       app:layout_scrollFlags="scroll|enterAlways|snap"
+       scroll表示当recycleView向上滚动的时候，Toolbar会跟着一起向上滚动并实现隐藏。
+       enterAlways表示当recycleView向下滚动的时候，ToolBar会跟着一起向下滚动并重新显示。
+       snap表示当Toolbar还没有完全隐藏或者显示的时候，会根据当前滚动的距离，自动选择是隐藏还是显示
+
+    这里
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    设置Toolbar的主题是因为我们在AndroidManifest.xml中的主题已经是浅色主题了，那么toolBar也会使用浅色主题，
+    但是系统为了显示，会将toolbar上面的元素使用深色主题，比图字体什么的使用黑色，但是这样看着效果很会差，
+    因此，我们需要单独给toolbar使用深色主题，这样上面的元素就是浅色主题了。
+    我们使用android:theme将toolbar的主题设置为深色，但是这样指定之后新的问题就出现了，
+    如果Toolbar中有菜单按钮，那么弹出来的菜单项会变成深色主题，因此我们使用
+    app:popupTheme属性将弹出的菜单项设置为淡色主题。
+    之所以用app:是因为这是5.0系统新增的，使用app:可以兼容5.0以下的系统。
+    -->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        ></android.support.v7.widget.RecyclerView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
